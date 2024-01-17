@@ -32,7 +32,7 @@ function initialize(){
     inquirer
   .prompt(questionList)
     .then((res) => {
-        console.log(res.shape[0]);
+        console.log(JSON.stringify(res));
         console.log("generating your logo now");
         createFile("./Created_Logo/logo.svg", generateSvg({...res}));
     });
@@ -43,3 +43,10 @@ function initialize(){
         return fs.writeFileSync(path.join(process.cwd(), dirPath), data)
     }
 initialize();
+
+function sum(a, b){
+    return a + b;
+};
+
+module.exports = createFile;
+module.exports = initialize;
