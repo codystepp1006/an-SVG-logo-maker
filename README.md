@@ -17,3 +17,5 @@
 ![Alt text](<Screenshot 2024-01-17 170039.png>)
 
 ## Walkthrough Video Link
+
+https://youtu.be/wrnG2FplTpg

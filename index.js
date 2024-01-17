@@ -1,8 +1,9 @@
 const path = require('path');
 const fs = require('fs');
-
 const inquirer = require('inquirer');
 const generateSvg = require('./shapes/shapes'); 
+
+
 const questionList = [
     {
         type: "input",
@@ -43,10 +44,6 @@ function initialize(){
         return fs.writeFileSync(path.join(process.cwd(), dirPath), data)
     }
 initialize();
-
-function sum(a, b){
-    return a + b;
-};
 
 module.exports = createFile;
 module.exports = initialize;
