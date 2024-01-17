@@ -1,7 +1,8 @@
-const inquirer = require('inquirer');
+const path = require('path');
 const fs = require('fs');
 
-
+const inquirer = require('inquirer');
+const generateSvg = require('./shapes/shapes'); 
 const questionList = [
     {
         type: "input",
@@ -27,8 +28,18 @@ const questionList = [
 ];
 
 function initialize(){
-    inquirer.createPromptModule(questionList)
-    .then((responses) =>{
-        console.log("Generated logo.svg!");
-    })
+
+    inquirer
+  .prompt(questionList)
+    .then((res) => {
+        console.log(res.shape[0]);
+        console.log("generating your logo now");
+        createFile("./Created_Logo/logo.svg", generateSvg({...res}));
+    });
 }
+
+    function createFile(dirPath, data){
+ 
+        return fs.writeFileSync(path.join(process.cwd(), dirPath), data)
+    }
+initialize();
