@@ -5,7 +5,7 @@ function generateSvg(data) {
     if (data.shape == "square"){       
 
         console.log("we made it to square somehow");
-        return '<svg version="1.1" width=""300" height="200" xmlns="http://www.w3.org/2000/svg">' +
+        return  '<svg version="1.1" width="300" height="200" xmlns="http://www.w3.org/2000/svg">' +
         '<rect width="100%" height="100%" fill="' + data.shapecolor +'" />' +
         '<text x="150" y="125" font-size="60" text-anchor="middle" fill="' + data.textcolor +'">' + data.text + '</text></svg>'
         
